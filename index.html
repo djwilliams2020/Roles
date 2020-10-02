@@ -36,8 +36,9 @@
     <div class="charFocus" v-for="role of roles" v-show="displayRole===role.name">
       <img :src="role.imgSrc" :alt="role.name">
 
-      <span class="bigLabel" id="tooltip">{{role.name}}
-        <span class="tooltiptext" v-for="role of roles " :key="role.clue">{{role.clue}}</span>
+      <span class="bigLabel" id="tooltip">{{role.name || 'loading...'}}
+        <span class="tooltiptext">{{role.clue1}}
+          <hr />{{role.clue2}}</span>
       </span>
     </div>
 
@@ -59,8 +60,8 @@
         roles: [
           {
             name: 'Customer',
-            clue: 'female',
-            clue: 'high pitch',
+            clue1: 'female',
+            clue2: 'high pitch',
             imgSrc: 'customer.png'
           },
           {

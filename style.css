@@ -89,6 +89,7 @@
     font-family: Cursive;
 
   }
+   
   body {
     animation-name: backgroundColorPalette;
     animation-duration: 5s;
@@ -115,4 +116,6 @@
       background: #ff9b85;
     }
   }
+  
+   
   
